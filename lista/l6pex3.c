@@ -6,5 +6,5 @@ duas variáveis, diga para cada chamada abaixo da função está correta ou erra
  int res = somaptr(&x, &y); errada, pois precisa ser x e &y
  int res = somaptr(*y, &x); certo
  int res = somaptr(*y, y); certo, pois esta colocando o valor referente ao ponteiro y e o ponteiro y
-*/
+*/ 
  
