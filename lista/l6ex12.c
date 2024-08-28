@@ -26,7 +26,4 @@ int testaDados(){
             return 50;
         }
         else{
-            return 100;
-        }
-    }
-}
+            return 100;}}}

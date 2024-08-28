@@ -2,8 +2,17 @@
 Utilizando a variável ponteiro criada, preencha cada posição do vetor com o caractere (char)
 correspondente à sua posição (‘0’, ‘1’, ‘2’, ..., ‘9’)*/
 #include <stdio.h>
+#include <stdlib.h>
 int main(){
-    int v[10] = {1,2,3};
-    int *ponteiro = &v;
+    char *ponteiro = (char*)malloc(10*sizeof(char));
+    for (int i=0;i<10;i++){
+        *(ponteiro+i) = '0' + i;
+    }
+    for (int j = 0; j < 10; j++)
+    {
+        printf("%c ", *(ponteiro+j));
+    }
+    free(ponteiro);
+    
     return 0;
 }
