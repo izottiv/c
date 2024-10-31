@@ -1,18 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #include "conta.h"
+#include "cliente.h"
 
 void setnumero(Conta* conta1, int numero){
     conta1->numeroconta = numero;
 }
 void setsaldo(Conta* conta1, float saldo){
     conta1->saldo = saldo;
-}
-void setnome(Conta* conta1, char* nome){
-    strcpy (conta1->nome, nome);
-}
-void setcpf(Conta* conta1, char* cpf){
-    strcpy(conta1->cpf, cpf);
 }
 void settipo(Conta* conta1, int tipo){
     conta1->tipo = tipo; 
@@ -26,12 +21,6 @@ int getnumero(Conta* conta1){
 }
 float getsaldo(Conta* conta1){
     return (conta1 -> saldo);
-}
-char* getnome(Conta* conta1){
-    return (conta1 -> nome);
-}
-char* getcpf(Conta* conta1){
-    return (conta1 -> cpf);
 }
 char* gettipo(Conta* conta1){
     if (conta1->tipo == 1){
@@ -47,8 +36,8 @@ int getano(Conta* conta1){
 }
 
 void central(Conta* conta1){
-    int r;
-    printf("Bem vindo a central\n");
+    int r, burro;
+    printf("\nBem vindo a central\n");
     printf("Que operacao deseja realizar ?\n");
     printf("1 - Cadastrar as informacoes da conta\n");
     printf("2 - Realizar um deposito\n");
@@ -57,6 +46,7 @@ void central(Conta* conta1){
     printf("5 - Visuzalizar as informacoes da conta\n");
     printf("Escolha a sua opcao: ");
     scanf("%d", &r);
+    printf("\n");
     switch (r)
     {
     case 1: 
@@ -76,6 +66,8 @@ void central(Conta* conta1){
         break;
     
     default:
+        printf("Opção inválida");
+        central(conta1);
         break;
     }
 }
@@ -89,24 +81,19 @@ void preencher(Conta* conta1){
     scanf("%d", &numero);
     printf("Digite seu saldo inicial: ");
     scanf("%f", &saldo);
-    printf("Digite o seu nome completo: ");
-    scanf("%s", nome);
-    printf("Digite seu cpf (Apenas os numeros): ");
-    scanf("%s", cpf);
+    preenchercliente(&conta1->usuario);
     printf("Digite o tipo da conta (1 - Corrente 2 - Poupanca): ");
     scanf("%d", &tipo);
     printf("Digite o ano de criacao da conta: ");
     scanf("%d", &ano);
-    Inicializar(conta1, numero, saldo, nome, cpf, tipo, ano);
+    Inicializar(conta1, numero, saldo, tipo, ano);
     
 }
 
-void Inicializar(Conta* conta1, int numero, float saldo, char* nome, char* cpf, int tipo, int anoabertura){
+void Inicializar(Conta* conta1, int numero, float saldo, int tipo, int anoabertura){
 char centrall;
 setnumero(conta1, numero); 
 setsaldo(conta1, saldo);
-setnome(conta1, nome);
-setcpf(conta1, cpf);
 settipo(conta1, tipo);
 setano(conta1, anoabertura);
 printf("Deseja retornar para a central (s/n)?\n");
@@ -191,6 +178,7 @@ void imprimir(Conta* conta1){
     printf("Ano de abertura da conta: ");
     printf("%d",getano(conta1));
     printf("\n");
+    imprimircliente(&conta1->usuario);
     printf("Deseja retornar para a central (s/n)?\n");
     scanf(" %c", &centrall);
     if(centrall == 's'){
