@@ -48,7 +48,7 @@ int getano(Conta* conta1){
 
 void central(Conta* conta1){
     int r;
-    printf("Bem vindo a central\n");
+    printf("\nBem vindo a central\n");
     printf("Que operacao deseja realizar ?\n");
     printf("1 - Cadastrar as informacoes da conta\n");
     printf("2 - Realizar um deposito\n");
@@ -57,6 +57,7 @@ void central(Conta* conta1){
     printf("5 - Visuzalizar as informacoes da conta\n");
     printf("Escolha a sua opcao: ");
     scanf("%d", &r);
+    printf("\n");
     switch (r)
     {
     case 1: 
