@@ -11,9 +11,11 @@ typedef struct
 
 void setnome(Cliente* usuario, char* nome);
 void setcpf(Cliente* usuario, char* cpf);
+void setendereco(Cliente* usuario, Endereco local);
 
 char* getnome(Cliente* usuario);
 char* getcpf(Cliente* usuario);
+Endereco getendereco(Cliente* usuario);
 
 void preenchercliente(Cliente* usuario);
 void inicializar(Cliente* usuario, char* nome, char* cpf);

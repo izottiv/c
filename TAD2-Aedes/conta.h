@@ -13,11 +13,13 @@ typedef struct
 
 void setnumero(Conta* conta1, int numero);
 void setsaldo(Conta* conta1, float saldo);
+void setcliente(Conta* conta1, Cliente usuario);
 void settipo(Conta* conta1, int tipo);
 void setano(Conta* conta1, int ano);
 
 int getnumero(Conta* conta1);
 float getsaldo(Conta* conta1);
+Cliente getcliente(Conta* conta1);
 char* gettipo(Conta* conta1);
 int getano(Conta* conta1);
 
@@ -25,7 +27,7 @@ void central(Conta* conta1);
 
 void preencher(Conta* conta1);
 
-void Inicializar(Conta* conta1, int numero, float saldo, int tipo, int anoabertura);
+void Inicializar(Conta* conta1, int numero, float saldo, Cliente usuario, int tipo, int anoabertura);
 
 void depositar(Conta* conta1);
 

@@ -13,14 +13,14 @@ typedef struct
 
 void setrua(Endereco* local, char* rua);
 void setbairro(Endereco* local, char* bairro);
-void setnumero(Endereco* local, char* numero);
+void setnumeroendereco(Endereco* local, char* numero);
 void setcidade(Endereco* local, char* cidade);
 void setestado(Endereco* local, char* estado);
 void setcep(Endereco* local, char* cep);
 
 char* getrua(Endereco* local);
 char* getbairro(Endereco* local);
-int getnumero(Endereco* local);
+int getnumeroendereco(Endereco* local);
 char* getcidade(Endereco* local);
 char* getestado(Endereco* local);
 char* getcep(Endereco* local);

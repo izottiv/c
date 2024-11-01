@@ -9,7 +9,7 @@ void setrua(Endereco* local, char* rua){
 void setbairro(Endereco* local, char* bairro){
     strcpy(local->bairro, bairro);
 }
-void setnumero(Endereco* local, int numero){
+void setnumeroendereco(Endereco* local, int numero){
     local->numero = numero;
 }
 void setcidade(Endereco* local, char* cidade){
@@ -28,7 +28,7 @@ char* getrua(Endereco* local){
 char* getbairro(Endereco* local){
     return local->bairro;
 }
-int getnumero(Endereco* local){
+int getnumeroendereco(Endereco* local){
     return local->numero;
 }
 char* getcidade(Endereco* local){

@@ -75,7 +75,9 @@ void central(Conta* conta1){
 void preencher(Conta* conta1){
     int numero, tipo, ano;
     float saldo;
+    Cliente usuario;
     char nome[50], cpf[11];
+    preenchercliente(&usuario);
     printf("Vamos criar a sua conta \n");
     printf("Digite o numero da sua conta: ");
     scanf("%d", &numero);
@@ -86,14 +88,15 @@ void preencher(Conta* conta1){
     scanf("%d", &tipo);
     printf("Digite o ano de criacao da conta: ");
     scanf("%d", &ano);
-    Inicializar(conta1, numero, saldo, tipo, ano);
+    Inicializar(conta1, numero, saldo, usuario, tipo, ano);
     
 }
 
-void Inicializar(Conta* conta1, int numero, float saldo, int tipo, int anoabertura){
+void Inicializar(Conta* conta1, int numero, float saldo, Cliente usuario, int tipo, int anoabertura){
 char centrall;
 setnumero(conta1, numero); 
 setsaldo(conta1, saldo);
+setcliente(conta1, usuario);
 settipo(conta1, tipo);
 setano(conta1, anoabertura);
 printf("Deseja retornar para a central (s/n)?\n");

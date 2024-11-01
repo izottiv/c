@@ -11,26 +11,35 @@ void setcpf(Cliente* usuario, char* cpf){
     strcpy(usuario->cpf, cpf);
 }
 
+void setendereco(Cliente* usuario, Endereco local){
+    usuario->lugar = local;
+}
+
 char* getnome(Cliente* usuario){
     return usuario->nome;
 }
 char* getcpf(Cliente* usuario){
     return usuario->cpf;
 }
+Endereco getendereco(Cliente* usuario){
+    return usuario->lugar;
+}
 
 void preenchercliente(Cliente* usuario){
     char nome[255], cpf[11];
+    Endereco lugar;
     printf("Preencha com suas informações pessoais: \n");
     printf("Digite seu nome completo:");
-    scanf("%s", nome);
+    scanf("%[^\n]", nome);
     printf("Digite o seu CPF(somente os numeros): ");
     scanf("%s", cpf); 
-    preencherendereco(&usuario->lugar);
-    inicializar(usuario, nome, cpf);
+    preencherendereco(&lugar);
+    inicializar(usuario, nome, cpf, lugar);
 }
-void inicializar(Cliente* usuario, char* nome, char* cpf){
+void inicializar(Cliente* usuario, char* nome, char* cpf, Endereco local){
     setnome(usuario, nome);
     setcpf(usuario, cpf);
+    setendereco(usuario, local);
 }
 
 void mudar(Cliente* usuario){
