@@ -1,5 +1,5 @@
 #ifndef ENDERECO_H_
-#define EDNERECO_H_
+#define ENDERECO_H_
 
 //Struct
 typedef struct
@@ -7,7 +7,7 @@ typedef struct
     char rua[255];
     int numerodacasa;
     char bairro[255];
-    char cep[8];
+    char cep[9];
     char cidade[255];
     char estado[3];
 }Endereco;

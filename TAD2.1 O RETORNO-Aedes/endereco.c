@@ -47,7 +47,7 @@ char* get_estado(Endereco* usuario){
 //funções
 void preencher_endereco(Endereco* usuario){
     int numero;
-    char rua[255], bairro[255], cidade[255], estado[2], cep[8];
+    char rua[255], bairro[255], cidade[255], estado[3], cep[9];
     printf("Digite suas informacoes de endereco:\n");
     printf("Digite a sua rua: ");
     scanf("%[^\n]", rua);getc(stdin);
@@ -55,11 +55,10 @@ void preencher_endereco(Endereco* usuario){
     scanf("%d", &numero);getc(stdin);
     printf("Digite o seu bairro: ");
     scanf("%[^\n]", bairro);getc(stdin);
-    printf("Digite a sua cidade: ");
-    scanf("%[^\n]", cidade);getc(stdin);    
-    printf("Cidade lida %s\n", usuario->cidade);
     printf("Digite o seu cep: ");
     scanf("%s", cep);getc(stdin);
+    printf("Digite a sua cidade: ");
+    scanf("%[^\n]", cidade);getc(stdin);
     printf("Digite o seu estado(apenas a sigla ex: MG): ");
     scanf("%s", estado);
 
@@ -72,7 +71,7 @@ void inicializar_endereco(Endereco* usuario, char* rua, int numero, char* bairro
     set_cep(usuario, cep);
     set_cidade(usuario, cidade);
     set_estado(usuario, estado);
-    
+
 }
 void imprimir_endereco(Endereco* usuario){
     printf("Rua %s N %d, %s\nCEP: %s\n", get_rua(usuario), get_numerodacasa(usuario), get_bairro(usuario), get_cep(usuario));

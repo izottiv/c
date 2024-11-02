@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include "endereco.h"
+#include "cliente.h"
+#include "conta.h"
 int main()
 {
-    Endereco local;
-    preencher_endereco(&local);
-    imprimir_endereco(&local);
+    Conta jorge;
+    preencher_conta(&jorge);
+    imprimir_conta(&jorge);
     return 0;
 }
