@@ -18,7 +18,7 @@ char* getcpf(Cliente* usuario);
 Endereco getendereco(Cliente* usuario);
 
 void preenchercliente(Cliente* usuario);
-void inicializar(Cliente* usuario, char* nome, char* cpf);
+void inicializar(Cliente* usuario, char* nome, char* cpf, Endereco lugar);
 
 void mudar(Cliente* usuario);
 void mudarnome(Cliente* usuario);

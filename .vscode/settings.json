@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "L1Q1.C": "cpp"
+        "L1Q1.C": "cpp",
+        "stdlib.h": "c",
+        "string.h": "c",
+        "dadospessoais.h": "c",
+        "stdio.h": "c"
     }
 }
