@@ -15,6 +15,9 @@ void settipo(Conta* conta1, int tipo){
 void setano(Conta* conta1, int ano){
     conta1->anoabertura = ano;
 }
+void setcliente(Conta* conta1, Cliente usuario){
+    conta1->usuario = usuario;
+}
 
 int getnumero(Conta* conta1){
     return (conta1 -> numeroconta);
@@ -33,6 +36,9 @@ char* gettipo(Conta* conta1){
 }
 int getano(Conta* conta1){
     return (conta1 -> anoabertura);
+}
+Cliente getcliente(Conta* conta1){
+    return (conta1->usuario);
 }
 
 void central(Conta* conta1){

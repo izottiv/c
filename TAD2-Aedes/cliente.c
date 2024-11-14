@@ -36,10 +36,10 @@ void preenchercliente(Cliente* usuario){
     preencherendereco(&lugar);
     inicializar(usuario, nome, cpf, lugar);
 }
-void inicializar(Cliente* usuario, char* nome, char* cpf, Endereco local){
+void inicializar(Cliente* usuario, char* nome, char* cpf, Endereco lugar){
     setnome(usuario, nome);
     setcpf(usuario, cpf);
-    setendereco(usuario, local);
+    setendereco(usuario, lugar);
 }
 
 void mudar(Cliente* usuario){
