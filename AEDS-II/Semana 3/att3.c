@@ -31,8 +31,6 @@ void Inserir(tipoApontador* no, int valor){
     }
 }
 
-
-
 void antecessor(tipoApontador q, tipoApontador *r){
     tipoApontador aux;
     if((*r)->Dir != NULL){
@@ -75,8 +73,8 @@ void Ordem(tipoApontador no){
     if(no!=NULL){
         Ordem(no->Esq);
         printf("%d ", no->valor);
-        Retira(no->valor, &no);
         Ordem(no->Dir);
+        Retira(no->valor, &no);
     }
 }
 int main(){
