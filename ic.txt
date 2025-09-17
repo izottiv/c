@@ -1,0 +1,27 @@
+o que eu tirei:
+Introdução: 
+-----------------------------------------------------------------
+ * O VLC tem se destacado como uma tecnologia promissora, capaz de transmitir dados utilizando a luz visível como meio, alcançando altas taxas de transmissão, visto que por estar presente no espectro de ondas com comprimento de 400 a 700 nanômetros podendo alcançar velocidades na casa dos Terabytes, enquanto o Wifi alcança apenas na faixa de Gigabytes. Segundo [Santos et al. 2024], em termos de velocidade, o Wi-Fi 6, em cenários reais, sua velocidade média varia entre 600 Mbps e 2 Gbps, dependendo ´ do ambiente, numero de dispositivos conectados e interferências.
+por:
+ * O VLC tem se destacado como uma tecnologia promissora, capaz de transmitir dados por meio da luz visível. Essa luz ocupa o espectro de ondas com comprimento entre 400 e 700 nanômetros, o que permite alcançar taxas de transmissão na ordem dos Terabytes. Em contraste, o Wi-Fi opera com velocidades significativamente menores, na faixa dos gigabytes. Segundo , em cenários reais, a velocidade média do Wi-Fi 6 varia entre 600 Mbps e 2 Gbps, dependendo do ambiente, do número de dispositivos conectados e das interferências presentes.
+-----------------------------------------------------------------
+
+NOAH:
+-----------------------------------------------------------------
+ * Neste cenário podemos nos deparar com duas situações atípicas.
+por:
+ * Neste cenário, duas situações atípicas podem ser observadas
+-----------------------------------------------------------------
+ * Já a perda de pacotes não codificados é exemplificada na Figura 1c. Se tratando do cenário dois, Figura 1b, temos que o algoritmo irá transmitir o “segundo” pacote que seria utilizado na codificação, como por exemplo, se o pacote 1 ⊕ 2 for perdido ele enviará o pacote 2 novamente, garantindo que ele não seja perdido.
+por
+ * Já a perda de pacotes não codificados é ilustrada na Figura 1c. No cenário da Figura 1b, caso o pacote codificado (1 ⊕ 2) seja perdido, o algoritmo retransmite o pacote 2, garantindo sua recuperação
+-----------------------------------------------------------------
+ * outro ponto importante a se destacar é que neste ponto também é salvo uma cópia do pacote atual antes da codificação
+por:
+ * outro ponto importante a se destacar é que, nesse momento, também é salva uma cópia do pacote atual antes da codificação.
+
+Conclusão:
+-----------------------------------------------------------------
+ * Os resultados relacionados a diminuição da perda de pacotes mostram que esta solução é promissora, mesmo devido às limitações de instabilidade que possui. Com ganhos perceptíveis em certas frequências e uma latência sem perdas, este tipo de aplicação se torna viável e atrativo para futuras melhorias e avanços na área.
+por:
+ * Os resultados indicam que o NOAH reduz significativamente a perda de pacotes, mantendo a latência estável, mesmo em cenários com variação de frequência. Dessa forma, sua aplicação em sistemas VLC mostra-se promissora, incentivando futuras pesquisas e melhorias na área.
